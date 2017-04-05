@@ -21,6 +21,13 @@ var DashboardComponent = (function () {
         if (!this.authService.isSessionActive()) {
             this.router.navigate(['login']);
         }
+        else {
+            this.optionVal = {
+                height: 400,
+                width: 900,
+                type: 'bar'
+            };
+        }
     };
     DashboardComponent.prototype.signOut = function () {
         this.authService.removeUserSession();
@@ -31,7 +38,7 @@ var DashboardComponent = (function () {
 DashboardComponent = __decorate([
     core_1.Component({
         selector: 'dashboard',
-        template: "\n    <div class=\"col-lg-6 col-lg-offset-3\">\n        <h1>\n            {{title}}\n        </h1>\n        <div class=\"btn btn-primary\" (click)=\"signOut()\" >sign out</div>\n    </div>\n  "
+        template: "\n    <div class=\"col-lg-6 col-lg-offset-3\">\n        <h1>\n            {{title}}\n        </h1>\n        <div class=\"btn btn-primary\" (click)=\"signOut()\" >sign out</div>\n\n        <chart [options] = optionVal ></chart>\n    </div>\n  "
     }),
     __metadata("design:paramtypes", [router_1.Router, auth_service_1.AuthService])
 ], DashboardComponent);

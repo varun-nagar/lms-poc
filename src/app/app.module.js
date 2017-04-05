@@ -12,6 +12,7 @@ var router_1 = require("@angular/router");
 var app_component_1 = require("./app.component");
 var login_component_1 = require("./login.component");
 var dashboard_component_1 = require("./dashboard.component");
+var chart_component_1 = require("./chart.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -35,7 +36,7 @@ AppModule = __decorate([
                     component: dashboard_component_1.DashboardComponent
                 }
             ])],
-        declarations: [app_component_1.AppComponent, login_component_1.LoginComponent, dashboard_component_1.DashboardComponent],
+        declarations: [app_component_1.AppComponent, login_component_1.LoginComponent, dashboard_component_1.DashboardComponent, chart_component_1.ChartComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
